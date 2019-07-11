@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gateway Auth</title>
+    <link rel="stylesheet" type="text/css" href="/splash.css">
+    <link rel="icon" type="image/x-icon" href="/$imagesdir/favicon.ico" />
+</head>
+
+<body>
+    <div class="topLogo">
+        <ul>
+            <li>
+                <a href="http://www.tp-link.com" target="blank">
+                    <img src="./images/logo.png" class="tp-logo">
+                </a>
+            </li>
+
+            <li class="router-info">
+                <table>
+                    <tr>
+                        <td class="style1">300M Wireless N Router</td>
+                    </tr>
+                    <tr>
+                        <td class="style2">Model No. TL-WR841N/TL-WR841ND </td>
+                    </tr>
+                    <tr>
+                        <td class="style3"> UI Developer : chankruze </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+
+    </div>
+    <div class="loginBox">
+        <img src="./images/avatar.png" class="avatar">
+        <h1>Gateway Auth</h1>
+        <div align="center">
+            <form method="get" action="$authaction">
+                <div align="center">
+                    <ul>
+                        <li>Your Token: $tok</li>
+                        <li>Your IP: $clientip</li>
+                        <li>Your MAC: $clientmac</li>
+                        <li>Up Time: $uptime</li>
+                        <li>Total Clients: $nclients</li>
+                    </ul>
+                    <input type="hidden" name="tok" value="$tok">
+                    <input type="hidden" name="redir" value="$redir">
+                    <button id="loginBtn" class="loginBtn" type="submit"/>Continue</button>
+                    <div>
+                        <label id="copyright">Copyright &copy; 2019 and beyond Geekofia Wireless TP-Link Router.</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
